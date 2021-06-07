@@ -1,0 +1,11 @@
+"use strict";
+var express1 = require('express');
+var uploadImage1 = require('../middlewares/uploader');
+var loginController = require('./controllers/loginController');
+var logoutController = require('./controllers/logoutController');
+var registerController = require('./controllers/registerController');
+var router = express1.Router();
+router.post('/login', loginController);
+router.post('/register', uploadImage1.single('image'), registerController);
+router.post('/logout', logoutController);
+module.exports = router;
