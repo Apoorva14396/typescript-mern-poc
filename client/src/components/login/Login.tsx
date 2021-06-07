@@ -62,8 +62,8 @@ const Login = (props: any) => {
   const handleLogin = () => {
     connection
       .post('/login', {
-        email: email,
-        password: password
+        email: email.toLowerCase(),
+        password: password.toLowerCase()
       })
       .then((res) => {
         if (res.data) {

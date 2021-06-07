@@ -29,9 +29,8 @@ const App = ({ setUserInfo }: any) => {
 
   var sectionStyle = {
     width: '100%',
-    height: '800px',
+    height: '100vh',
     backgroundColor: '#AD288C'
-    // backgroundImage: `url(${bg})`
   };
   return (
     <div style={sectionStyle}>

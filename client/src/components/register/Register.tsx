@@ -84,12 +84,12 @@ const Register = () => {
     ) {
       let formData = new FormData();
       formData.append('firstName', firstName);
-      formData.append('password', password);
-      formData.append('confirmPassword', confirmPassword);
+      formData.append('password', password.toLowerCase());
+      formData.append('confirmPassword', confirmPassword.toLowerCase());
       formData.append('phone', phone);
       formData.append('address', address);
       formData.append('description', description);
-      formData.append('email', email);
+      formData.append('email', email.toLowerCase());
       if (image) {
         formData.append('image', image);
       }
@@ -203,7 +203,7 @@ const Register = () => {
               <TextField
                 fullWidth
                 id='phone'
-                type='number'
+                type='tel'
                 placeholder='Phone'
                 margin='normal'
                 InputProps={{
@@ -420,6 +420,17 @@ const Register = () => {
                   {!validateSpecialChar(confirmPassword) && (
                     <li>The confirm password must have a special character.</li>
                   )}
+                </ul>
+              )}
+              {!(confirmPassword === password) && (
+                <ul
+                  style={{
+                    color: 'red',
+                    paddingLeft: '10px',
+                    fontSize: '14px'
+                  }}
+                >
+                  <li>Password doesn't match.</li>
                 </ul>
               )}
               <TextField

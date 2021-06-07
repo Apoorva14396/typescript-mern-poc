@@ -6,7 +6,7 @@ const UserModel = require('../models/userModel');
 
 const admin = {
   email: 'admin@admin.com',
-  password: 'Admin@1234',
+  password: 'admin@1234',
   role: 'admin'
 };
 

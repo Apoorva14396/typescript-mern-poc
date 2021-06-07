@@ -5,7 +5,7 @@ var UserModel = require('../models/userModel');
 /* Please enter email password provided by client */
 var admin = {
     email: 'admin@admin.com',
-    password: 'Admin@1234',
+    password: 'admin@1234',
     role: 'admin'
 };
 function seeder() {
