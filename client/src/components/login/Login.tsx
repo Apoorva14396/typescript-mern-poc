@@ -206,11 +206,19 @@ const Login = (props: any) => {
               )}
             </CardContent>
             <CardActions>
-              {email !== '' && password !== '' && !errorPassword && !errorEmail && (
-                <Button variant='contained' size='large' color='primary' onClick={handleLogin}>
-                  Login
-                </Button>
-              )}
+              {email !== '' &&
+                password !== '' &&
+                !errorPassword &&
+                !errorEmail &&
+                validateLength(password) &&
+                validateLower(password) &&
+                validateUpper(password) &&
+                validateNumber(password) &&
+                validateSpecialChar(password) && (
+                  <Button variant='contained' size='large' color='primary' onClick={handleLogin}>
+                    Login
+                  </Button>
+                )}
               <Button
                 style={{ float: 'right' }}
                 variant='contained'
