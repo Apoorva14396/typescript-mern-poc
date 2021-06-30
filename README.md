@@ -1,6 +1,6 @@
 # typescript-poc
 
-Front end and Back end using typescript.(MERN)
+Front end and Back end using typescript.(MERN).
 
 Consists of client and server folder respectively.
 For Admin account use credentials ,since seeding is implemented.
